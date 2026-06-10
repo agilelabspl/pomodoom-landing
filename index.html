@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+    </script>
     <style>
         :root {
             --ink: #f8eee7;
@@ -698,6 +702,59 @@
             letter-spacing: 1px;
         }
 
+        .consent-banner {
+            position: fixed;
+            z-index: 50;
+            right: 20px;
+            bottom: 20px;
+            width: min(430px, calc(100% - 40px));
+            padding: 19px;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            background: rgba(26, 21, 22, .98);
+            box-shadow: 0 24px 60px rgba(0,0,0,.5);
+        }
+
+        .consent-banner[hidden] {
+            display: none;
+        }
+
+        .consent-banner strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .consent-banner p {
+            margin-top: 7px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .consent-actions {
+            display: flex;
+            gap: 9px;
+            margin-top: 14px;
+        }
+
+        .consent-button {
+            min-height: 40px;
+            padding: 0 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            color: var(--ink);
+            background: transparent;
+            font: 800 12px var(--body);
+            cursor: pointer;
+        }
+
+        .consent-button.accept {
+            border-color: transparent;
+            color: #fff;
+            background: var(--red);
+        }
+
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .manifesto-track { animation: none; }
@@ -746,6 +803,8 @@
             .waitlist { padding: 78px 0; }
             .waitlist-panel { padding: 32px 22px; }
             .footer-inner { align-items: flex-start; flex-direction: column; }
+            .consent-banner { right: 14px; bottom: 14px; width: calc(100% - 28px); }
+            .consent-actions { display: grid; grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
@@ -759,7 +818,7 @@
             <nav class="nav" aria-label="Main navigation">
                 <a href="#how">How it works</a>
                 <a href="#community">Community</a>
-                <a class="button button-primary" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta</a>
+                <a class="button button-primary" data-analytics-location="navigation" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta</a>
             </nav>
         </div>
     </header>
@@ -772,7 +831,7 @@
                     <h1>Focus or <span>ketchup.</span></h1>
                     <p><strong>Pomodoom is a mobile focus app currently in development.</strong> A brutally simple Pomodoro timer with a Killer Tomato that notices when you work, when you quit and when you deserve a break.</p>
                     <div class="hero-actions">
-                        <a class="button button-primary" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta waitlist</a>
+                        <a class="button button-primary" data-analytics-location="hero" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta waitlist</a>
                         <a class="button button-secondary" href="#how">See how it works</a>
                     </div>
                     <div class="microcopy">No spam. Just beta access and important Pomodoom updates.</div>
@@ -871,7 +930,7 @@
                     <p>Leave your email, name and phone system in a short Google Form. We will contact you when the Pomodoom beta is ready.</p>
                 </div>
                 <div class="waitlist-action">
-                    <a class="button button-primary" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Pomodoom beta</a>
+                    <a class="button button-primary" data-analytics-location="waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Pomodoom beta</a>
                     <small>The form opens in a new tab and is handled by Google Forms.</small>
                 </div>
             </div>
@@ -884,5 +943,68 @@
             <span>Pomodoom is currently in development.</span>
         </div>
     </footer>
+
+    <aside class="consent-banner" id="analytics-consent" aria-label="Analytics preferences" hidden>
+        <strong>Help us improve Pomodoom</strong>
+        <p>We use Google Analytics to measure visits and beta sign-up clicks. Analytics stays off unless you accept.</p>
+        <div class="consent-actions">
+            <button class="consent-button" id="analytics-decline" type="button">Necessary only</button>
+            <button class="consent-button accept" id="analytics-accept" type="button">Accept analytics</button>
+        </div>
+    </aside>
+
+    <script>
+        (function () {
+            var consentKey = 'pomodoom_analytics_consent';
+            var banner = document.getElementById('analytics-consent');
+            var savedConsent = localStorage.getItem(consentKey);
+            var analyticsEnabled = false;
+
+            function loadAnalytics() {
+                if (analyticsEnabled) return;
+                analyticsEnabled = true;
+
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-KTJW15S4X1';
+                document.head.appendChild(script);
+
+                gtag('js', new Date());
+                gtag('config', 'G-KTJW15S4X1', { anonymize_ip: true });
+            }
+
+            function updateConsent(value) {
+                localStorage.setItem(consentKey, value);
+                banner.hidden = true;
+                if (value === 'granted') loadAnalytics();
+            }
+
+            if (savedConsent === 'granted') {
+                loadAnalytics();
+            } else if (savedConsent === 'denied') {
+                banner.hidden = true;
+            } else {
+                banner.hidden = false;
+            }
+
+            document.getElementById('analytics-accept').addEventListener('click', function () {
+                updateConsent('granted');
+            });
+
+            document.getElementById('analytics-decline').addEventListener('click', function () {
+                updateConsent('denied');
+            });
+
+            document.querySelectorAll('[data-analytics-location]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (!analyticsEnabled) return;
+                    gtag('event', 'join_beta', {
+                        cta_location: link.dataset.analyticsLocation,
+                        link_url: link.href
+                    });
+                });
+            });
+        }());
+    </script>
 </body>
 </html>
