@@ -702,6 +702,25 @@
             letter-spacing: 1px;
         }
 
+        .footer-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer a,
+        .consent-banner a {
+            color: var(--cream);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer a:hover,
+        .consent-banner a:hover {
+            color: var(--ink);
+        }
+
         .consent-banner {
             position: fixed;
             z-index: 50;
@@ -803,6 +822,7 @@
             .waitlist { padding: 78px 0; }
             .waitlist-panel { padding: 32px 22px; }
             .footer-inner { align-items: flex-start; flex-direction: column; }
+            .footer-links { align-items: flex-start; flex-direction: column; gap: 10px; }
             .consent-banner { right: 14px; bottom: 14px; width: calc(100% - 28px); }
             .consent-actions { display: grid; grid-template-columns: 1fr 1fr; }
         }
@@ -940,13 +960,16 @@
     <footer class="footer">
         <div class="shell footer-inner">
             <strong>Pomodoom: Focus or ketchup.</strong>
-            <span>Pomodoom is currently in development.</span>
+            <div class="footer-links">
+                <span>Pomodoom is currently in development.</span>
+                <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">Privacy policy</a>
+            </div>
         </div>
     </footer>
 
     <aside class="consent-banner" id="analytics-consent" aria-label="Analytics preferences" hidden>
         <strong>Help us improve Pomodoom</strong>
-        <p>We use Google Analytics to measure visits and beta sign-up clicks. Analytics stays off unless you accept.</p>
+        <p>We use Google Analytics to measure visits and beta sign-up clicks. Analytics stays off unless you accept. See our <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
         <div class="consent-actions">
             <button class="consent-button" id="analytics-decline" type="button">Necessary only</button>
             <button class="consent-button accept" id="analytics-accept" type="button">Accept analytics</button>
