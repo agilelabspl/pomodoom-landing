@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pomodoom is a focus timer with a killer tomato that keeps your work sessions moving. Join the beta waitlist.">
-    <meta name="theme-color" content="#100d0e">
-    <meta property="og:title" content="Pomodoom: Focus or Ketchup">
-    <meta property="og:description" content="A focus timer with character. Join the Pomodoom beta waitlist.">
+    <meta name="description" content="Focus for 25 minutes, finish the job and earn respect. Request access to the Pomodoom private beta.">
+    <meta name="theme-color" content="#120d0c">
+    <meta property="og:title" content="Pomodoom: Focus. Earn Respect.">
+    <meta property="og:description" content="One job. Twenty-five minutes. Earn respect. Request access to the Pomodoom beta.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/pom1.png">
-    <title>Pomodoom: Focus or Ketchup</title>
+    <meta property="og:image" content="assets/maf1.png">
+    <title>Pomodoom: Focus. Earn Respect.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
     </script>
     <style>
         :root {
-            --ink: #f8eee7;
-            --muted: #b9aaa4;
-            --paper: #100d0e;
-            --panel: #1a1516;
-            --panel-light: #241b1d;
-            --red: #f04438;
-            --red-dark: #a91919;
-            --tomato: #ff5a45;
-            --cream: #f6d9af;
-            --acid: #d9f34a;
-            --line: rgba(248, 238, 231, 0.14);
+            --ink: #f8ecdc;
+            --muted: #bdaea0;
+            --paper: #120d0c;
+            --panel: #1d1513;
+            --panel-light: #2a1d19;
+            --red: #d93b31;
+            --red-dark: #8d1f1b;
+            --tomato: #ed4a3b;
+            --cream: #f2ddbc;
+            --accent: #b48a45;
+            --mint: #d2ae68;
+            --line: rgba(242, 221, 188, 0.16);
             --shadow: rgba(0, 0, 0, 0.42);
-            --radius: 20px;
-            --display: 'Anton', sans-serif;
-            --body: 'Inter', sans-serif;
+            --radius: 24px;
+            --display: 'Archivo Black', sans-serif;
+            --body: 'DM Sans', sans-serif;
         }
 
         * {
@@ -52,9 +53,9 @@
             overflow-x: hidden;
             color: var(--ink);
             background:
-                radial-gradient(circle at 78% 10%, rgba(240, 68, 56, 0.17), transparent 24rem),
-                radial-gradient(circle at 8% 42%, rgba(217, 243, 74, 0.07), transparent 25rem),
-                linear-gradient(180deg, #100d0e 0%, #140f10 58%, #0c0a0b 100%);
+                radial-gradient(circle at 81% 13%, rgba(180, 138, 69, 0.17), transparent 27rem),
+                radial-gradient(circle at 8% 43%, rgba(217, 59, 49, 0.1), transparent 25rem),
+                linear-gradient(180deg, #120d0c 0%, #18100f 58%, #0d0908 100%);
             font-family: var(--body);
         }
 
@@ -66,9 +67,8 @@
             pointer-events: none;
             opacity: 0.22;
             background-image:
-                linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-            background-size: 64px 64px;
+                linear-gradient(115deg, transparent 0 48%, rgba(255,255,255,.025) 49% 50%, transparent 51% 100%);
+            background-size: 42px 42px;
         }
 
         a {
@@ -93,7 +93,7 @@
             right: 0;
             left: 0;
             border-bottom: 1px solid rgba(248, 238, 231, 0.08);
-            background: rgba(16, 13, 14, 0.82);
+            background: rgba(18, 13, 12, 0.88);
             backdrop-filter: blur(16px);
         }
 
@@ -116,8 +116,8 @@
             height: 44px;
             overflow: hidden;
             border: 1px solid var(--line);
-            border-radius: 14px;
-            background: #1b1516;
+            border-radius: 13px;
+            background: #231714;
         }
 
         .brand-mark img {
@@ -128,9 +128,9 @@
 
         .brand-name {
             font-family: var(--display);
-            font-size: 28px;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -.7px;
         }
 
         .nav {
@@ -147,16 +147,17 @@
         }
 
         .button {
-            min-height: 52px;
+            min-height: 56px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 0 21px;
-            border: 1px solid transparent;
-            border-radius: 14px;
-            font-size: 14px;
+            padding: 0 24px;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            font-size: 15px;
             font-weight: 900;
+            letter-spacing: .025em;
             transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
         }
 
@@ -165,20 +166,29 @@
         }
 
         .button-primary {
-            color: #fff;
-            background: linear-gradient(145deg, var(--tomato), var(--red-dark));
-            box-shadow: 0 16px 34px rgba(240, 68, 56, 0.25);
+            border-color: #ffb09f;
+            color: #160806;
+            background: #ff5a49;
+            box-shadow: 6px 6px 0 var(--accent), 0 18px 38px rgba(0, 0, 0, 0.42);
+            text-shadow: none;
+        }
+
+        .button-primary:hover {
+            color: #0e0403;
+            background: #ff7565;
+            box-shadow: 8px 8px 0 #d2ae68, 0 22px 44px rgba(0, 0, 0, 0.48);
         }
 
         .button-secondary {
             border-color: var(--line);
-            background: rgba(255,255,255,.04);
+            background: rgba(180, 138, 69, .08);
         }
 
         .nav .button {
-            min-height: 42px;
-            padding: 0 16px;
-            color: #fff;
+            min-height: 46px;
+            padding: 0 18px;
+            color: #21110e;
+            font-size: 13px;
         }
 
         .hero {
@@ -203,9 +213,9 @@
             margin-bottom: 22px;
             padding: 8px 11px;
             border: 1px solid var(--line);
-            border-radius: 9px;
+            border-radius: 999px;
             color: var(--cream);
-            background: rgba(255,255,255,.04);
+            background: rgba(180, 138, 69, .12);
             font-size: 12px;
             font-weight: 900;
             letter-spacing: .09em;
@@ -216,23 +226,22 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--acid);
-            box-shadow: 0 0 16px rgba(217, 243, 74, .8);
+            background: var(--mint);
+            box-shadow: 0 0 16px rgba(210, 174, 104, .55);
         }
 
         h1,
         h2,
         .big-type {
             font-family: var(--display);
-            font-weight: 400;
-            letter-spacing: .5px;
-            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: -.055em;
         }
 
         h1 {
             max-width: 680px;
-            font-size: clamp(70px, 8.7vw, 130px);
-            line-height: .86;
+            font-size: clamp(56px, 7vw, 102px);
+            line-height: .98;
         }
 
         h1 span {
@@ -261,7 +270,7 @@
 
         .microcopy {
             margin-top: 14px;
-            color: #847672;
+            color: #897b70;
             font-size: 12px;
             font-weight: 700;
         }
@@ -279,7 +288,7 @@
             aspect-ratio: 1;
             border-radius: 50%;
             content: '';
-            background: radial-gradient(circle, rgba(240,68,56,.28), rgba(240,68,56,.04) 52%, transparent 70%);
+            background: radial-gradient(circle, rgba(180,138,69,.28), rgba(217,59,49,.07) 52%, transparent 70%);
             filter: blur(4px);
         }
 
@@ -310,11 +319,11 @@
             aspect-ratio: 9 / 18.7;
             padding: 11px;
             overflow: hidden;
-            border: 2px solid #4b4142;
+            border: 2px solid #5d4940;
             border-radius: 48px;
-            background: #080708;
+            background: #090706;
             box-shadow:
-                0 0 0 5px #171314,
+                0 0 0 5px #241a17,
                 0 36px 60px rgba(0,0,0,.58);
             transform: rotate(3deg);
         }
@@ -326,8 +335,8 @@
             overflow: hidden;
             border-radius: 37px;
             background:
-                radial-gradient(circle at 50% 43%, rgba(240,68,56,.17), transparent 42%),
-                #100d0e;
+                radial-gradient(circle at 50% 43%, rgba(180,138,69,.18), transparent 42%),
+                #130e0d;
         }
 
         .phone-notch {
@@ -377,7 +386,7 @@
             border: 1px solid var(--line);
             border-radius: 18px 18px 4px 18px;
             color: var(--ink);
-            background: rgba(36,27,29,.94);
+            background: rgba(42,29,25,.96);
             box-shadow: 0 18px 40px var(--shadow);
             font-size: 12px;
             font-weight: 900;
@@ -393,7 +402,7 @@
             padding: 12px 15px;
             border: 1px solid var(--line);
             border-radius: 18px;
-            background: rgba(26,21,22,.92);
+            background: rgba(29,21,19,.94);
             box-shadow: 0 20px 46px var(--shadow);
             text-align: center;
             transform: translateX(-50%);
@@ -431,8 +440,8 @@
 
         .manifesto {
             border-block: 1px solid var(--line);
-            background: var(--tomato);
-            color: #190b0b;
+            background: var(--red-dark);
+            color: var(--cream);
             overflow: hidden;
         }
 
@@ -442,9 +451,8 @@
             display: flex;
             gap: 34px;
             font-family: var(--display);
-            font-size: clamp(30px, 4vw, 56px);
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: clamp(24px, 3.2vw, 44px);
+            letter-spacing: -.02em;
             animation: marquee 22s linear infinite;
         }
 
@@ -461,8 +469,8 @@
         }
 
         .section-heading h2 {
-            font-size: clamp(52px, 7vw, 94px);
-            line-height: .93;
+            font-size: clamp(42px, 5.8vw, 76px);
+            line-height: 1;
         }
 
         .section-heading p {
@@ -488,7 +496,7 @@
             flex-direction: column;
             border: 1px solid var(--line);
             border-radius: var(--radius);
-            background: linear-gradient(155deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+            background: linear-gradient(155deg, rgba(180,138,69,.1), rgba(255,255,255,.018));
             box-shadow: 0 22px 48px rgba(0,0,0,.16);
         }
 
@@ -513,6 +521,62 @@
             line-height: 1.55;
         }
 
+        .family-message-demo {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: minmax(180px, .42fr) minmax(0, 1fr);
+            align-items: center;
+            gap: 26px;
+            padding: 25px 28px;
+            border: 1px solid rgba(180,138,69,.42);
+            border-radius: var(--radius);
+            background:
+                radial-gradient(circle at 90% 50%, rgba(217,59,49,.14), transparent 34%),
+                linear-gradient(145deg, rgba(180,138,69,.1), rgba(255,255,255,.02));
+            box-shadow: 0 22px 48px rgba(0,0,0,.2);
+        }
+
+        .family-message-label {
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .11em;
+            text-transform: uppercase;
+        }
+
+        .family-message-demo h3 {
+            margin-top: 7px;
+            font-size: 21px;
+            line-height: 1.2;
+        }
+
+        .family-message-screen {
+            min-height: 92px;
+            display: flex;
+            align-items: center;
+            padding: 18px 21px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgba(10,7,6,.62);
+        }
+
+        .family-message-screen p {
+            color: var(--ink);
+            font-size: clamp(18px, 2.2vw, 27px);
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .family-message-meta {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--accent);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
         .character-section {
             padding-top: 42px;
         }
@@ -526,7 +590,7 @@
             border: 1px solid var(--line);
             border-radius: 28px;
             background:
-                radial-gradient(circle at 20% 50%, rgba(240,68,56,.18), transparent 36%),
+                radial-gradient(circle at 20% 50%, rgba(217,59,49,.16), transparent 38%),
                 var(--panel);
         }
 
@@ -535,8 +599,8 @@
         }
 
         .character-copy h2 {
-            font-size: clamp(52px, 6.3vw, 88px);
-            line-height: .9;
+            font-size: clamp(42px, 5.3vw, 72px);
+            line-height: 1;
         }
 
         .character-copy > p {
@@ -561,12 +625,75 @@
             font-weight: 800;
         }
 
+        .don-select {
+            padding-top: 76px;
+        }
+
+        .don-select-panel {
+            padding: 36px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background:
+                radial-gradient(circle at 85% 15%, rgba(180,138,69,.14), transparent 30%),
+                var(--panel);
+        }
+
+        .don-select-intro {
+            max-width: 760px;
+        }
+
+        .don-select-intro h2 {
+            font-size: clamp(42px, 5.8vw, 76px);
+            line-height: 1;
+        }
+
+        .don-select-intro p {
+            max-width: 650px;
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.65;
+        }
+
+        .don-gallery {
+            display: grid;
+            gap: 16px;
+            margin-top: 34px;
+        }
+
+        .don-board {
+            overflow: hidden;
+            border: 1px solid rgba(242,221,188,.2);
+            border-radius: 18px;
+            background: #080605;
+        }
+
+        .don-board img {
+            width: 100%;
+            height: auto;
+        }
+
+        .don-select-action {
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .don-select-action p {
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
         .community {
             position: relative;
             overflow: hidden;
             border-block: 1px solid var(--line);
             background: var(--cream);
-            color: #251516;
+            color: #251613;
         }
 
         .community-grid {
@@ -577,14 +704,14 @@
         }
 
         .community h2 {
-            font-size: clamp(54px, 7vw, 96px);
-            line-height: .91;
+            font-size: clamp(42px, 5.8vw, 76px);
+            line-height: 1;
         }
 
         .community p {
             max-width: 690px;
             margin-top: 18px;
-            color: #665150;
+            color: #6c574c;
             font-size: 17px;
             font-weight: 700;
             line-height: 1.65;
@@ -592,10 +719,10 @@
 
         .vote-card {
             padding: 24px;
-            border: 2px solid #251516;
+            border: 2px solid #251613;
             border-radius: 18px;
-            background: #fff7e8;
-            box-shadow: 10px 10px 0 #251516;
+            background: #fff8ed;
+            box-shadow: 10px 10px 0 var(--red-dark);
             transform: rotate(2deg);
         }
 
@@ -622,7 +749,7 @@
 
         .vote-options b {
             padding: 11px 12px;
-            border: 1px solid rgba(37,21,22,.22);
+            border: 1px solid rgba(37,22,19,.22);
             border-radius: 9px;
             font-size: 13px;
         }
@@ -639,17 +766,17 @@
             align-items: center;
             gap: 40px;
             padding: 48px;
-            border: 1px solid rgba(240,68,56,.4);
+            border: 1px solid rgba(180,138,69,.52);
             border-radius: 28px;
             background:
-                radial-gradient(circle at 85% 50%, rgba(240,68,56,.25), transparent 29%),
-                linear-gradient(135deg, #251719, #160f10);
+                radial-gradient(circle at 85% 50%, rgba(217,59,49,.24), transparent 31%),
+                linear-gradient(135deg, #2a1c18, #17100e);
             box-shadow: 0 34px 80px rgba(0,0,0,.3);
         }
 
         .waitlist h2 {
-            font-size: clamp(58px, 7vw, 100px);
-            line-height: .9;
+            font-size: clamp(44px, 5.8vw, 78px);
+            line-height: 1;
         }
 
         .waitlist p {
@@ -672,7 +799,7 @@
         }
 
         .waitlist-action small {
-            color: #8d7b76;
+            color: #9b8a7d;
             text-align: center;
             font-size: 11px;
             font-weight: 700;
@@ -682,7 +809,7 @@
         .footer {
             padding: 28px 0 36px;
             border-top: 1px solid rgba(248,238,231,.08);
-            color: #756764;
+            color: #897b70;
             font-size: 12px;
             font-weight: 700;
         }
@@ -730,7 +857,7 @@
             padding: 19px;
             border: 1px solid var(--line);
             border-radius: 17px;
-            background: rgba(26, 21, 22, .98);
+            background: rgba(29, 21, 19, .98);
             box-shadow: 0 24px 60px rgba(0,0,0,.5);
         }
 
@@ -799,10 +926,10 @@
             .shell { width: min(100% - 28px, 1180px); }
             .topbar-inner { height: 66px; }
             .brand-mark { width: 38px; height: 38px; }
-            .brand-name { font-size: 23px; }
-            .nav .button { min-height: 38px; padding: 0 12px; font-size: 12px; }
+            .brand-name { font-size: 18px; }
+            .nav .button { min-height: 42px; padding: 0 13px; font-size: 13px; }
             .hero { padding-top: 102px; }
-            h1 { font-size: 66px; }
+            h1 { font-size: 53px; }
             .hero-copy > p { font-size: 16px; }
             .hero-actions { display: grid; }
             .hero-actions .button { width: 100%; }
@@ -817,7 +944,11 @@
             .section { padding: 78px 0; }
             .feature-grid { grid-template-columns: 1fr; }
             .feature-card { min-height: 235px; }
+            .family-message-demo { grid-template-columns: 1fr; padding: 22px 18px; }
             .character-grid { padding: 24px 18px; }
+            .don-select { padding-top: 54px; }
+            .don-select-panel { padding: 26px 16px; }
+            .don-select-action .button { width: 100%; }
             .community-grid { gap: 30px; }
             .waitlist { padding: 78px 0; }
             .waitlist-panel { padding: 32px 22px; }
@@ -837,8 +968,8 @@
             </a>
             <nav class="nav" aria-label="Main navigation">
                 <a href="#how">How it works</a>
-                <a href="#community">Community</a>
-                <a class="button button-primary" data-analytics-location="navigation" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta</a>
+                <a href="#community">The Family</a>
+                <a class="button button-primary" data-analytics-location="navigation" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
             </nav>
         </div>
     </header>
@@ -847,25 +978,23 @@
         <section class="hero">
             <div class="shell hero-grid">
                 <div class="hero-copy">
-                    <div class="eyebrow"><span class="eyebrow-dot"></span> Mobile focus app · Private beta coming soon</div>
-                    <h1>Focus or <span>ketchup.</span></h1>
-                    <p><strong>Pomodoom is a mobile focus app currently in development.</strong> A brutally simple Pomodoro timer with a Killer Tomato that notices when you work, when you quit and when you deserve a break.</p>
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Private beta · Invitations opening soon</div>
+                    <h1>Focus. <span>Earn respect.</span></h1>
+                    <p><strong>One job. Twenty-five minutes. No excuses.</strong> Pomodoom is a brutally simple mobile focus timer that rewards you for finishing what you started.</p>
                     <div class="hero-actions">
-                        <a class="button button-primary" data-analytics-location="hero" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the beta waitlist</a>
+                        <a class="button button-primary" data-analytics-location="hero" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
                         <a class="button button-secondary" href="#how">See how it works</a>
                     </div>
-                    <div class="microcopy">No spam. Just beta access and important Pomodoom updates.</div>
+                    <div class="microcopy">Join the Family and get access to the private beta. No spam.</div>
                 </div>
                 <div class="hero-art" aria-label="Pomodoom mobile app shown on a phone">
-                    <img class="peek-tomato left" src="assets/pom2.png" alt="" aria-hidden="true">
-                    <img class="peek-tomato right" src="assets/pom9.png" alt="" aria-hidden="true">
                     <div class="phone-frame">
                         <div class="phone-screen">
                             <div class="phone-notch"></div>
                             <div class="phone-label">Pomodoom mobile app</div>
-                            <div class="speech">You opened the timer. Now do the work.</div>
-                            <img class="hero-tomato" src="assets/pom1.png" alt="Angry Killer Tomato inside the Pomodoom mobile app">
-                            <div class="timer-card"><span>Focus session</span><strong>25:00</strong></div>
+                            <div class="speech">You gave your word. Finish the job.</div>
+                            <img class="hero-tomato" src="assets/maf1.png" alt="The Don, Pomodoom's tomato focus boss">
+                            <div class="timer-card"><span>Current job</span><strong>25:00</strong></div>
                             <div class="phone-home"></div>
                         </div>
                     </div>
@@ -875,50 +1004,81 @@
 
         <div class="manifesto" aria-hidden="true">
             <div class="manifesto-track">
-                <span>Pomodoom: Focus or ketchup</span><span>One tap. One task. No excuses.</span><span>Pomodoom: Focus or ketchup</span><span>One tap. One task. No excuses.</span>
-                <span>Pomodoom: Focus or ketchup</span><span>One tap. One task. No excuses.</span><span>Pomodoom: Focus or ketchup</span><span>One tap. One task. No excuses.</span>
+                <span>Focus. Earn respect.</span><span>One focus job. Twenty-five minutes. No excuses.</span><span>Focus. Earn respect.</span><span>One focus job. Twenty-five minutes. No excuses.</span>
+                <span>Focus. Earn respect.</span><span>One focus job. Twenty-five minutes. No excuses.</span><span>Focus. Earn respect.</span><span>One focus job. Twenty-five minutes. No excuses.</span>
             </div>
         </div>
 
         <section class="section" id="how">
             <div class="shell">
                 <div class="section-heading">
-                    <div class="eyebrow">A Pomodoro timer with teeth</div>
-                    <h2>Start fast. Stay focused. Survive the tomato.</h2>
-                    <p>No projects to configure and no task to type in. Open Pomodoom, hit Start and give one thing your full attention.</p>
+                    <div class="eyebrow">No elaborate productivity system</div>
+                    <h2>Every session is a job.</h2>
+                    <p>Open Pomodoom, accept one 25-minute focus job and keep your word. No projects to configure, no planning ritual and no room for excuses.</p>
                 </div>
                 <div class="feature-grid">
                     <article class="feature-card">
                         <span class="feature-number">01</span>
-                        <h3>Start in one tap</h3>
-                        <p>A clean 25-minute focus session without onboarding, planning rituals or another productivity system to maintain.</p>
+                        <h3>Accept the job</h3>
+                        <p>One tap starts a clean 25-minute focus session. Choose what matters and begin immediately.</p>
                     </article>
                     <article class="feature-card">
                         <span class="feature-number">02</span>
-                        <h3>Hear what matters</h3>
-                        <p>Pomodoom reminds you when three minutes remain and speaks when focus or break time ends.</p>
+                        <h3>Keep your word</h3>
+                        <p>The Family sends timely reminders so you do not forget what you promised. Start, pause, finish or walk away. The Don will have an opinion.</p>
                     </article>
                     <article class="feature-card">
                         <span class="feature-number">03</span>
-                        <h3>Build a visible streak</h3>
-                        <p>Track completed sessions and focused time. Let the numbers prove the tomato was not yelling for nothing.</p>
+                        <h3>Earn respect</h3>
+                        <p>Completed jobs build your streak and focused time. Your record speaks for itself.</p>
                     </article>
+                </div>
+                <div class="family-message-demo">
+                    <div>
+                        <span class="family-message-label">Messages from the Family</span>
+                        <h3>They remember what you promised.</h3>
+                    </div>
+                    <div class="family-message-screen">
+                        <p id="family-message"><span class="family-message-meta">Job accepted</span>Twenty-five minutes. We understand each other.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section character-section">
             <div class="shell character-grid">
-                <img class="character-image" src="assets/pom4.png" alt="Killer Tomato celebrating a completed focus session" loading="lazy">
+                <img class="character-image" src="assets/maf1.png" alt="The Don, the Pomodoom focus boss" loading="lazy">
                 <div class="character-copy">
-                    <div class="eyebrow">More than a countdown</div>
-                    <h2>Your timer has opinions.</h2>
-                    <p>Killer Tomato reacts to starting, pausing, finishing and giving up. Pomodoom is designed to feel like a character keeping you company, not another sterile utility.</p>
+                    <div class="eyebrow">Meet the Don</div>
+                    <h2>The timer remembers.</h2>
+                    <p>The Don reacts to starting, pausing, finishing and quitting. Pomodoom is designed to feel like a demanding character across the desk, not another sterile utility.</p>
                     <div class="voice-lines">
-                        <div class="voice-line">“Focus time. Try not to embarrass us both.”</div>
-                        <div class="voice-line">“Three minutes left. Finish what you started.”</div>
-                        <div class="voice-line">“Session complete. Acceptable.”</div>
+                        <div class="voice-line">“Twenty-five minutes. We understand each other.”</div>
+                        <div class="voice-line">“Pause? Think carefully.”</div>
+                        <div class="voice-line">“Job complete. Respect earned.”</div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section don-select">
+            <div class="shell don-select-panel">
+                <div class="don-select-intro">
+                    <div class="eyebrow">Planned for the beta</div>
+                    <h2>Choose your Don.</h2>
+                    <p>Your focus boss should feel like yours. Help us choose which visual styles and personalities make it into the first Pomodoom beta.</p>
+                </div>
+                <div class="don-gallery">
+                    <figure class="don-board">
+                        <img src="assets/mafselect1.png" alt="Five illustrated visual styles for the Pomodoom tomato boss" loading="lazy">
+                    </figure>
+                    <figure class="don-board">
+                        <img src="assets/mafselect2.png" alt="Five additional visual styles for the Pomodoom tomato boss" loading="lazy">
+                    </figure>
+                </div>
+                <div class="don-select-action">
+                    <a class="button button-primary" data-analytics-location="character-selection" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
+                    <p>Early members influence the final character roster.</p>
                 </div>
             </div>
         </section>
@@ -926,17 +1086,17 @@
         <section class="section community" id="community">
             <div class="shell community-grid">
                 <div>
-                    <div class="eyebrow">Built with the first users</div>
-                    <h2>You vote. The tomato evolves.</h2>
-                    <p>People on the Pomodoom waitlist will help decide which feature, reaction or new character should be added next. Join early and influence what gets built.</p>
+                    <div class="eyebrow">Built with the first members</div>
+                    <h2>Help build the family.</h2>
+                    <p>Early members will help decide which reactions, competitive features and new characters enter Pomodoom next. Join before the doors open.</p>
                 </div>
                 <aside class="vote-card" aria-label="Example community vote">
-                    <span>Next community vote</span>
-                    <strong>What should Pomodoom get next?</strong>
+                    <span>First family vote</span>
+                    <strong>What should we test next?</strong>
                     <div class="vote-options">
-                        <b>More Killer Tomato reactions</b>
-                        <b>New focus character</b>
-                        <b>Shareable session cards</b>
+                        <b>Private focus families</b>
+                        <b>Weekly respect rankings</b>
+                        <b>More reactions from the Don</b>
                     </div>
                 </aside>
             </div>
@@ -945,12 +1105,12 @@
         <section class="waitlist" id="waitlist">
             <div class="shell waitlist-panel">
                 <div>
-                    <div class="eyebrow">Beta waitlist</div>
-                    <h2>The tomato is waiting.</h2>
-                    <p>Leave your email, name and phone system in a short Google Form. We will contact you when the Pomodoom beta is ready.</p>
+                    <div class="eyebrow">Private beta waitlist</div>
+                    <h2>The Don is expecting you.</h2>
+                    <p>Leave your email, name and phone system in a short form. We will contact you when your Pomodoom beta invitation is ready.</p>
                 </div>
                 <div class="waitlist-action">
-                    <a class="button button-primary" data-analytics-location="waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Pomodoom beta</a>
+                    <a class="button button-primary" data-analytics-location="waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
                     <small>The form opens in a new tab and is handled by Google Forms.</small>
                 </div>
             </div>
@@ -959,7 +1119,7 @@
 
     <footer class="footer">
         <div class="shell footer-inner">
-            <strong>Pomodoom: Focus or ketchup.</strong>
+            <strong>Pomodoom: Focus. Earn respect.</strong>
             <div class="footer-links">
                 <span>Pomodoom is currently in development.</span>
                 <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">Privacy policy</a>
@@ -1027,6 +1187,49 @@
                     });
                 });
             });
+
+            var familyMessage = document.getElementById('family-message');
+            var familyMessages = [
+                { stage: 'Job accepted', text: 'Twenty-five minutes. We understand each other.' },
+                { stage: 'Focus in progress', text: 'Stay with the job. The Family is watching.' },
+                { stage: 'Three minutes left', text: 'Three minutes left. Finish the job.' },
+                { stage: 'Pause requested', text: 'The clock stopped. Your promise did not.' },
+                { stage: 'Job complete', text: 'You kept your word. The Family noticed.' }
+            ];
+            var familyMessageIndex = 0;
+            var familyMessageTimer;
+            var familyMessageCharacterTimer;
+
+            function typeFamilyMessage(message) {
+                var messageMeta = document.createElement('span');
+                var messageText = document.createTextNode('');
+                var characterIndex = 0;
+                messageMeta.className = 'family-message-meta';
+                messageMeta.textContent = message.stage;
+                familyMessage.replaceChildren(messageMeta, messageText);
+
+                function typeNextCharacter() {
+                    messageText.nodeValue += message.text.charAt(characterIndex);
+                    characterIndex += 1;
+
+                    if (characterIndex < message.text.length) {
+                        familyMessageCharacterTimer = window.setTimeout(typeNextCharacter, 38);
+                    } else {
+                        familyMessageTimer = window.setTimeout(showNextFamilyMessage, 2300);
+                    }
+                }
+
+                typeNextCharacter();
+            }
+
+            function showNextFamilyMessage() {
+                window.clearTimeout(familyMessageTimer);
+                window.clearTimeout(familyMessageCharacterTimer);
+                familyMessageIndex = (familyMessageIndex + 1) % familyMessages.length;
+                typeFamilyMessage(familyMessages[familyMessageIndex]);
+            }
+
+            typeFamilyMessage(familyMessages[familyMessageIndex]);
         }());
     </script>
 </body>
