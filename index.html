@@ -248,6 +248,14 @@
             color: var(--tomato);
         }
 
+        h1 .hero-subline {
+            display: block;
+            margin-top: 10px;
+            font-size: .58em;
+            line-height: 1.04;
+            letter-spacing: -.035em;
+        }
+
         .hero-copy > p {
             max-width: 590px;
             margin-top: 25px;
@@ -264,8 +272,13 @@
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 13px;
+            align-items: flex-start;
+            gap: 14px;
             margin-top: 31px;
+        }
+
+        .hero-actions .button {
+            min-height: 52px;
         }
 
         .microcopy {
@@ -273,6 +286,77 @@
             color: #897b70;
             font-size: 12px;
             font-weight: 700;
+        }
+
+        .store-badges {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 21px;
+        }
+
+        .store-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            width: 166px;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 1.35;
+            text-align: center;
+        }
+
+        .store-badge-shell {
+            width: 166px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .store-badge-button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .store-badge img {
+            width: 166px;
+            height: 52px;
+            object-fit: contain;
+            transition: transform .2s ease, filter .2s ease;
+        }
+
+        .store-badge:hover img {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .store-badge small {
+            display: block;
+        }
+
+        .store-badge small[hidden],
+        .store-coming-soon[hidden] {
+            display: none;
+        }
+
+        .store-coming-soon {
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 1.35;
+            text-align: center;
+        }
+
+        .store-coming-soon a {
+            color: var(--cream);
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
         .hero-art {
@@ -806,6 +890,11 @@
             line-height: 1.45;
         }
 
+        .waitlist-action .store-badges {
+            justify-content: center;
+            margin-top: 0;
+        }
+
         .footer {
             padding: 28px 0 36px;
             border-top: 1px solid rgba(248,238,231,.08);
@@ -934,6 +1023,10 @@
             .hero-copy > p { font-size: 16px; }
             .hero-actions { display: grid; }
             .hero-actions .button { width: 100%; }
+            .store-badges { display: grid; }
+            .store-badge { width: 100%; align-items: flex-start; text-align: left; }
+            .store-badge-shell { width: 100%; align-items: flex-start; }
+            .store-coming-soon { text-align: left; }
             .hero-art { min-height: 420px; }
             .phone-frame { width: min(300px, 78vw); }
             .peek-tomato { width: 48%; opacity: .62; }
@@ -980,11 +1073,19 @@
             <div class="shell hero-grid">
                 <div class="hero-copy">
                     <div class="eyebrow"><span class="eyebrow-dot"></span> Private beta · Invitations opening soon</div>
-                    <h1>Focus. <span>Earn respect.</span></h1>
-                    <p><strong>One job. Twenty-five minutes. No excuses.</strong> Focus or Ketchup is a brutally simple mobile focus timer that rewards you for finishing what you started.</p>
+                    <h1>Focus or Ketchup. <span class="hero-subline">The Family is watching.</span></h1>
+                    <p><strong>One job. Twenty-five minutes. No excuses.</strong> Accept the focus job, keep your word and earn respect.</p>
                     <div class="hero-actions">
+                        <a class="store-badge store-badge-google" data-analytics-location="hero-google-play" href="https://play.google.com/store/apps/details?id=com.focusorketchup.app" target="_blank" rel="noopener noreferrer" aria-label="Get Focus or Ketchup on Google Play">
+                            <img src="assets/google-play-badge-trimmed.png" alt="Get it on Google Play">
+                        </a>
+                        <span class="store-badge-shell">
+                            <button class="store-badge store-badge-button" data-analytics-location="hero-app-store" type="button" aria-expanded="false" aria-label="App Store coming soon">
+                                <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+                            </button>
+                            <small class="store-coming-soon" hidden>Coming soon. <a data-analytics-location="hero-app-store-waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the list</a> and the Family will contact you.</small>
+                        </span>
                         <a class="button button-primary" data-analytics-location="hero" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
-                        <a class="button button-secondary" href="#how">See how it works</a>
                     </div>
                     <div class="microcopy">Join the Family and get access to the private beta. No spam.</div>
                 </div>
@@ -1111,8 +1212,17 @@
                     <p>Leave your email, name and phone system in a short form. We will contact you when your Focus or Ketchup beta invitation is ready.</p>
                 </div>
                 <div class="waitlist-action">
-                    <a class="button button-primary" data-analytics-location="waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
-                    <small>The form opens in a new tab and is handled by Google Forms.</small>
+                    <div class="store-badges" aria-label="Download Focus or Ketchup">
+                        <a class="store-badge store-badge-google" data-analytics-location="waitlist-google-play" href="https://play.google.com/store/apps/details?id=com.focusorketchup.app" target="_blank" rel="noopener noreferrer" aria-label="Get Focus or Ketchup on Google Play">
+                            <img src="assets/google-play-badge-trimmed.png" alt="Get it on Google Play">
+                        </a>
+                        <span class="store-badge-shell">
+                            <button class="store-badge store-badge-button" data-analytics-location="waitlist-app-store" type="button" aria-expanded="false" aria-label="App Store coming soon">
+                                <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+                            </button>
+                            <small class="store-coming-soon" hidden>Coming soon. <a data-analytics-location="waitlist-app-store-waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the list</a> and the Family will contact you.</small>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1184,8 +1294,17 @@
                     if (!analyticsEnabled) return;
                     gtag('event', 'join_beta', {
                         cta_location: link.dataset.analyticsLocation,
-                        link_url: link.href
+                        link_url: link.href || ''
                     });
+                });
+            });
+
+            document.querySelectorAll('.store-badge-button').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var message = button.parentElement.querySelector('.store-coming-soon');
+                    if (!message) return;
+                    message.hidden = false;
+                    button.setAttribute('aria-expanded', 'true');
                 });
             });
 
