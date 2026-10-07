@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Focus for 25 minutes, finish the job and earn respect. Join the Focus or Ketchup private beta.">
+    <meta name="description" content="Focus for 25 minutes, finish the job and earn respect. Download Focus or Ketchup on the App Store.">
     <meta name="theme-color" content="#120d0c">
     <meta property="og:title" content="Focus or Ketchup: Focus. Earn Respect.">
-    <meta property="og:description" content="One job. Twenty-five minutes. Earn respect. Join the Focus or Ketchup beta.">
+    <meta property="og:description" content="One job. Twenty-five minutes. Earn respect. Focus or Ketchup is on the App Store.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/maf1.png">
     <title>Focus or Ketchup: Focus. Earn Respect.</title>
@@ -309,21 +309,6 @@
             text-align: center;
         }
 
-        .store-badge-shell {
-            width: 166px;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .store-badge-button {
-            padding: 0;
-            border: 0;
-            background: transparent;
-            cursor: pointer;
-        }
-
         .store-badge img {
             width: 166px;
             height: 52px;
@@ -334,29 +319,6 @@
         .store-badge:hover img {
             transform: translateY(-2px);
             filter: brightness(1.08);
-        }
-
-        .store-badge small {
-            display: block;
-        }
-
-        .store-badge small[hidden],
-        .store-coming-soon[hidden] {
-            display: none;
-        }
-
-        .store-coming-soon {
-            color: var(--muted);
-            font-size: 11px;
-            font-weight: 800;
-            line-height: 1.35;
-            text-align: center;
-        }
-
-        .store-coming-soon a {
-            color: var(--cream);
-            text-decoration: underline;
-            text-underline-offset: 3px;
         }
 
         .hero-art {
@@ -838,63 +800,6 @@
             font-size: 13px;
         }
 
-        .waitlist {
-            padding: 112px 0;
-        }
-
-        .waitlist-panel {
-            position: relative;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(300px, .54fr);
-            align-items: center;
-            gap: 40px;
-            padding: 48px;
-            border: 1px solid rgba(180,138,69,.52);
-            border-radius: 28px;
-            background:
-                radial-gradient(circle at 85% 50%, rgba(217,59,49,.24), transparent 31%),
-                linear-gradient(135deg, #2a1c18, #17100e);
-            box-shadow: 0 34px 80px rgba(0,0,0,.3);
-        }
-
-        .waitlist h2 {
-            font-size: clamp(44px, 5.8vw, 78px);
-            line-height: 1;
-        }
-
-        .waitlist p {
-            max-width: 650px;
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-
-        .waitlist-action {
-            display: grid;
-            gap: 14px;
-        }
-
-        .waitlist-action .button {
-            min-height: 62px;
-            font-size: 16px;
-        }
-
-        .waitlist-action small {
-            color: #9b8a7d;
-            text-align: center;
-            font-size: 11px;
-            font-weight: 700;
-            line-height: 1.45;
-        }
-
-        .waitlist-action .store-badges {
-            justify-content: center;
-            margin-top: 0;
-        }
-
         .footer {
             padding: 28px 0 36px;
             border-top: 1px solid rgba(248,238,231,.08);
@@ -1001,8 +906,7 @@
             .hero { min-height: auto; }
             .hero-grid,
             .character-grid,
-            .community-grid,
-            .waitlist-panel {
+            .community-grid {
                 grid-template-columns: 1fr;
             }
             .hero-art { min-height: 560px; }
@@ -1025,8 +929,6 @@
             .hero-actions .button { width: 100%; }
             .store-badges { display: grid; }
             .store-badge { width: 100%; align-items: flex-start; text-align: left; }
-            .store-badge-shell { width: 100%; align-items: flex-start; }
-            .store-coming-soon { text-align: left; }
             .hero-art { min-height: 420px; }
             .phone-frame { width: min(300px, 78vw); }
             .peek-tomato { width: 48%; opacity: .62; }
@@ -1044,8 +946,6 @@
             .don-select-panel { padding: 26px 16px; }
             .don-select-action .button { width: 100%; }
             .community-grid { gap: 30px; }
-            .waitlist { padding: 78px 0; }
-            .waitlist-panel { padding: 32px 22px; }
             .footer-inner { align-items: flex-start; flex-direction: column; }
             .footer-links { align-items: flex-start; flex-direction: column; gap: 10px; }
             .consent-banner { right: 14px; bottom: 14px; width: calc(100% - 28px); }
@@ -1063,7 +963,7 @@
             <nav class="nav" aria-label="Main navigation">
                 <a href="#how">How it works</a>
                 <a href="#community">The Family</a>
-                <a class="button button-primary" data-analytics-location="navigation" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
+                <a class="button button-primary" data-analytics-location="navigation" href="https://apps.apple.com/us/app/focus-or-ketchup-study-timer/id6808171272" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
             </nav>
         </div>
     </header>
@@ -1072,22 +972,14 @@
         <section class="hero">
             <div class="shell hero-grid">
                 <div class="hero-copy">
-                    <div class="eyebrow"><span class="eyebrow-dot"></span> Private beta · Invitations opening soon</div>
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Now on the App Store · iPhone and iPad</div>
                     <h1>Focus or Ketchup. <span class="hero-subline">The Family is watching.</span></h1>
                     <p><strong>One job. Twenty-five minutes. No excuses.</strong> Accept the focus job, keep your word and earn respect.</p>
                     <div class="hero-actions">
-                        <a class="store-badge store-badge-google" data-analytics-location="hero-google-play" href="https://play.google.com/store/apps/details?id=com.focusorketchup.app" target="_blank" rel="noopener noreferrer" aria-label="Get Focus or Ketchup on Google Play">
-                            <img src="assets/google-play-badge-trimmed.png" alt="Get it on Google Play">
+                        <a class="store-badge" data-analytics-location="hero-app-store" href="https://apps.apple.com/us/app/focus-or-ketchup-study-timer/id6808171272" target="_blank" rel="noopener noreferrer" aria-label="Download Focus or Ketchup on the App Store">
+                            <img src="assets/app-store-badge.svg" alt="Download on the App Store">
                         </a>
-                        <span class="store-badge-shell">
-                            <button class="store-badge store-badge-button" data-analytics-location="hero-app-store" type="button" aria-expanded="false" aria-label="App Store coming soon">
-                                <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-                            </button>
-                            <small class="store-coming-soon" hidden>Coming soon. <a data-analytics-location="hero-app-store-waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the list</a> and the Family will contact you.</small>
-                        </span>
-                        <a class="button button-primary" data-analytics-location="hero" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
                     </div>
-                    <div class="microcopy">Join the Family and get access to the private beta. No spam.</div>
                 </div>
                 <div class="hero-art" aria-label="Focus or Ketchup mobile app shown on a phone">
                     <div class="phone-frame">
@@ -1166,9 +1058,9 @@
         <section class="section don-select">
             <div class="shell don-select-panel">
                 <div class="don-select-intro">
-                    <div class="eyebrow">Planned for the beta</div>
+                    <div class="eyebrow">Meet the roster</div>
                     <h2>Choose your Don.</h2>
-                    <p>Your focus boss should feel like yours. Help us choose which visual styles and personalities make it into the first Focus or Ketchup beta.</p>
+                    <p>Your focus boss should feel like yours. Focus or Ketchup ships with a lineup of visual styles and personalities so you can pick the Don that fits your desk.</p>
                 </div>
                 <div class="don-gallery">
                     <figure class="don-board">
@@ -1179,8 +1071,7 @@
                     </figure>
                 </div>
                 <div class="don-select-action">
-                    <a class="button button-primary" data-analytics-location="character-selection" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the Family</a>
-                    <p>Early members influence the final character roster.</p>
+                    <a class="button button-primary" data-analytics-location="character-selection" href="https://apps.apple.com/us/app/focus-or-ketchup-study-timer/id6808171272" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
                 </div>
             </div>
         </section>
@@ -1190,7 +1081,7 @@
                 <div>
                     <div class="eyebrow">Built with the first members</div>
                     <h2>Help build the family.</h2>
-                    <p>Early members will help decide which reactions, competitive features and new characters enter Focus or Ketchup next. Join before the doors open.</p>
+                    <p>Early members help decide which reactions, competitive features and new characters enter Focus or Ketchup next. Download the app and join the family.</p>
                 </div>
                 <aside class="vote-card" aria-label="Example community vote">
                     <span>First family vote</span>
@@ -1204,35 +1095,13 @@
             </div>
         </section>
 
-        <section class="waitlist" id="waitlist">
-            <div class="shell waitlist-panel">
-                <div>
-                    <div class="eyebrow">Private beta waitlist</div>
-                    <h2>The Don is expecting you.</h2>
-                    <p>Leave your email, name and phone system in a short form. We will contact you when your Focus or Ketchup beta invitation is ready.</p>
-                </div>
-                <div class="waitlist-action">
-                    <div class="store-badges" aria-label="Download Focus or Ketchup">
-                        <a class="store-badge store-badge-google" data-analytics-location="waitlist-google-play" href="https://play.google.com/store/apps/details?id=com.focusorketchup.app" target="_blank" rel="noopener noreferrer" aria-label="Get Focus or Ketchup on Google Play">
-                            <img src="assets/google-play-badge-trimmed.png" alt="Get it on Google Play">
-                        </a>
-                        <span class="store-badge-shell">
-                            <button class="store-badge store-badge-button" data-analytics-location="waitlist-app-store" type="button" aria-expanded="false" aria-label="App Store coming soon">
-                                <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-                            </button>
-                            <small class="store-coming-soon" hidden>Coming soon. <a data-analytics-location="waitlist-app-store-waitlist" href="https://forms.gle/ybX2bQ2nC3k4GZGS7" target="_blank" rel="noopener noreferrer">Join the list</a> and the Family will contact you.</small>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
         <div class="shell footer-inner">
             <strong>Focus or Ketchup: Focus. Earn respect.</strong>
             <div class="footer-links">
-                <span>Focus or Ketchup is currently in development.</span>
+                <span>Focus or Ketchup is available on the App Store.</span>
                 <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">Privacy policy</a>
             </div>
         </div>
@@ -1240,7 +1109,7 @@
 
     <aside class="consent-banner" id="analytics-consent" aria-label="Analytics preferences" hidden>
         <strong>Help us improve Focus or Ketchup</strong>
-        <p>We use Google Analytics to measure visits and beta sign-up clicks. Analytics stays off unless you accept. See our <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
+        <p>We use Google Analytics to measure visits and App Store clicks. Analytics stays off unless you accept. See our <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
         <div class="consent-actions">
             <button class="consent-button" id="analytics-decline" type="button">Necessary only</button>
             <button class="consent-button accept" id="analytics-accept" type="button">Accept analytics</button>
@@ -1292,19 +1161,10 @@
             document.querySelectorAll('[data-analytics-location]').forEach(function (link) {
                 link.addEventListener('click', function () {
                     if (!analyticsEnabled) return;
-                    gtag('event', 'join_beta', {
+                    gtag('event', 'app_store_click', {
                         cta_location: link.dataset.analyticsLocation,
                         link_url: link.href || ''
                     });
-                });
-            });
-
-            document.querySelectorAll('.store-badge-button').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var message = button.parentElement.querySelector('.store-coming-soon');
-                    if (!message) return;
-                    message.hidden = false;
-                    button.setAttribute('aria-expanded', 'true');
                 });
             });
 
