@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro for ADHD: What Actually Works (And What Doesn't)</title>
+    <meta name="description" content="A plain-English guide to using the Pomodoro Technique with an ADHD brain. The parts that work, the parts that break, and how to adapt the 25/5 rule so it actually sticks.">
+    <link rel="canonical" href="https://pomodoom.com/blog/pomodoro-for-adhd/">
+    <meta name="theme-color" content="#120d0c">
+    <meta property="og:title" content="Pomodoro for ADHD: What Actually Works">
+    <meta property="og:description" content="The 25-minute rule works for ADHD until it doesn't. Here's how to adapt it so you finish the session instead of opening Instagram at minute 7.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pomodoom.com/blog/pomodoro-for-adhd/">
+    <meta property="og:image" content="/assets/maf1.png">
+    <meta property="article:published_time" content="2026-10-29">
+    <meta property="article:author" content="Pawel Zielinski">
+    <meta property="article:section" content="ADHD">
+    <meta property="article:tag" content="pomodoro, adhd, focus, productivity">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pomodoro for ADHD: What Actually Works">
+    <meta name="twitter:description" content="The 25-minute rule works for ADHD until it doesn't. Here's how to adapt it.">
+    <meta name="twitter:image" content="/assets/maf1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Pomodoro for ADHD: What Actually Works (And What Doesn't)",
+        "description": "A plain-English guide to using the Pomodoro Technique with an ADHD brain. The parts that work, the parts that break, and how to adapt the 25/5 rule so it actually sticks.",
+        "image": "https://pomodoom.com/assets/maf1.png",
+        "author": {
+            "@type": "Person",
+            "name": "Pawel Zielinski",
+            "url": "https://pomodoom.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Focus or Ketchup",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://pomodoom.com/assets/icon.png"
+            }
+        },
+        "datePublished": "2026-10-29",
+        "dateModified": "2026-10-29",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pomodoom.com/blog/pomodoro-for-adhd/"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Does the Pomodoro Technique work for ADHD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, for many people with ADHD, but usually not in the stock 25/5 form. The timer gives external structure and a visible finish line, which helps a brain that struggles with internal time sense. The 25-minute default is often too long when motivation is low, and too short when hyperfocus kicks in. Adjust the length to your task and energy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long should an ADHD person work before a break?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "There is no single right number. Start low, often 5 to 15 minutes, when you cannot start at all. Stretch to 50 or 60 when you are deep in flow. The honest rule is: pick a length you can actually finish today, not the length that would look good on a productivity blog."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is 25 minutes too short for ADHD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It can be, especially for deep work like writing or coding. ADHD hyperfocus often needs 15 to 25 minutes just to warm up. If the timer rings right as you finally dropped in, the alarm feels punishing and the next session gets harder to start."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What focus apps are made for ADHD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Any app that lets you set custom session lengths, shows the timer visibly, blocks distracting apps during the session, and does not punish you for pausing. Fixed 25-minute timers with gamified punishments for breaks tend to backfire for ADHD brains."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you stop checking your phone during a Pomodoro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Willpower loses to a notification nine times out of ten. The most reliable way is a hard block: a focus timer that locks social and video apps on your phone during the session, so opening Instagram simply does not happen. Putting the phone in another room is a close second."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --ink: #f8ecdc;
+            --muted: #bdaea0;
+            --paper: #120d0c;
+            --panel: #1d1513;
+            --panel-light: #2a1d19;
+            --red: #d93b31;
+            --red-dark: #8d1f1b;
+            --tomato: #ed4a3b;
+            --cream: #f2ddbc;
+            --accent: #b48a45;
+            --mint: #d2ae68;
+            --line: rgba(242, 221, 188, 0.16);
+            --shadow: rgba(0, 0, 0, 0.42);
+            --radius: 24px;
+            --display: 'Archivo Black', sans-serif;
+            --body: 'DM Sans', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; background: var(--paper); }
+
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 81% 13%, rgba(180, 138, 69, 0.17), transparent 27rem),
+                radial-gradient(circle at 8% 43%, rgba(217, 59, 49, 0.1), transparent 25rem),
+                linear-gradient(180deg, #120d0c 0%, #18100f 58%, #0d0908 100%);
+            font-family: var(--body);
+            line-height: 1.7;
+        }
+
+        body::before {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            content: '';
+            pointer-events: none;
+            opacity: 0.22;
+            background-image: linear-gradient(115deg, transparent 0 48%, rgba(255,255,255,.025) 49% 50%, transparent 51% 100%);
+            background-size: 42px 42px;
+        }
+
+        a { color: var(--cream); text-decoration: underline; text-decoration-color: rgba(242, 221, 188, 0.35); text-underline-offset: 3px; }
+        a:hover { color: var(--ink); text-decoration-color: var(--tomato); }
+
+        img { display: block; max-width: 100%; }
+
+        .shell { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+        .shell-wide { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+        .topbar {
+            position: fixed;
+            z-index: 20;
+            top: 0; right: 0; left: 0;
+            border-bottom: 1px solid rgba(248, 238, 231, 0.08);
+            background: rgba(18, 13, 12, 0.88);
+            backdrop-filter: blur(16px);
+        }
+        .topbar-inner {
+            height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+        .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+        .brand-mark {
+            width: 44px; height: 44px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            background: #231714;
+        }
+        .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
+        .brand-name {
+            font-family: var(--display);
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -.7px;
+            color: var(--ink);
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 800;
+        }
+        .nav a { text-decoration: none; color: var(--muted); }
+        .nav a:hover { color: var(--ink); }
+        .nav .button {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 18px;
+            border: 2px solid #ffb09f;
+            border-radius: 12px;
+            color: #160806;
+            background: #ff5a49;
+            font-size: 13px;
+            font-weight: 900;
+            box-shadow: 4px 4px 0 var(--accent);
+            text-decoration: none;
+        }
+        .nav .button:hover { background: #ff7565; transform: translateY(-1px); }
+
+        article {
+            padding: 128px 0 72px;
+        }
+
+        .article-eyebrow {
+            width: fit-content;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 22px;
+            padding: 8px 11px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--cream);
+            background: rgba(180, 138, 69, .12);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+        .eyebrow-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--mint);
+            box-shadow: 0 0 16px rgba(210, 174, 104, .55);
+        }
+
+        h1 {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.02;
+            letter-spacing: -.045em;
+            margin-bottom: 20px;
+        }
+        h1 span { color: var(--tomato); }
+
+        .lede {
+            color: var(--muted);
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 640px;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 18px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 44px;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .article-meta strong { color: var(--ink); font-weight: 700; }
+
+        h2 {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(26px, 3.4vw, 36px);
+            line-height: 1.1;
+            letter-spacing: -.035em;
+            margin: 56px 0 20px;
+            color: var(--ink);
+        }
+
+        h3 {
+            font-family: var(--display);
+            font-size: 20px;
+            line-height: 1.25;
+            letter-spacing: -.02em;
+            margin: 36px 0 14px;
+            color: var(--cream);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 18px;
+            color: var(--ink);
+        }
+        p strong { color: var(--cream); }
+
+        ul, ol { padding-left: 22px; margin-bottom: 20px; }
+        li { font-size: 17px; line-height: 1.7; margin-bottom: 10px; }
+        li::marker { color: var(--tomato); font-weight: 900; }
+
+        blockquote {
+            margin: 28px 0;
+            padding: 20px 24px;
+            border-left: 4px solid var(--tomato);
+            background: rgba(42, 29, 25, 0.5);
+            border-radius: 0 14px 14px 0;
+            color: var(--cream);
+            font-style: italic;
+            font-size: 17px;
+        }
+        blockquote cite {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .tldr {
+            padding: 24px 28px;
+            margin: 32px 0;
+            border: 1px solid rgba(180, 138, 69, 0.42);
+            border-radius: var(--radius);
+            background:
+                radial-gradient(circle at 90% 20%, rgba(217, 59, 49, 0.12), transparent 40%),
+                linear-gradient(145deg, rgba(180, 138, 69, 0.1), rgba(255, 255, 255, 0.02));
+            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.2);
+        }
+        .tldr-label {
+            display: block;
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .tldr h2 {
+            margin: 0 0 14px;
+            font-size: 24px;
+        }
+        .tldr ul { margin-bottom: 0; }
+        .tldr li { font-size: 16px; }
+
+        .cta-card {
+            margin: 56px 0;
+            padding: 32px 32px;
+            border: 1px solid rgba(237, 74, 59, 0.4);
+            border-radius: var(--radius);
+            background:
+                radial-gradient(circle at 85% 50%, rgba(217, 59, 49, 0.18), transparent 50%),
+                linear-gradient(155deg, rgba(180, 138, 69, 0.14), rgba(255, 255, 255, 0.02));
+            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3);
+        }
+        .cta-card h3 {
+            margin-top: 0;
+            color: var(--ink);
+            font-size: 24px;
+        }
+        .cta-card p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 14px 24px;
+            border: 2px solid #ffb09f;
+            border-radius: 12px;
+            background: #ff5a49;
+            color: #160806;
+            font-weight: 900;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 6px 6px 0 var(--accent);
+            transition: transform .2s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #ff7565;
+            color: #0e0403;
+        }
+
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .faq-item:last-child { border-bottom: 0; }
+        .faq-item h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: var(--ink);
+            font-family: var(--body);
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+        .faq-item p { margin: 0; color: var(--muted); font-size: 16px; }
+
+        .related {
+            margin-top: 64px;
+            padding-top: 36px;
+            border-top: 1px solid var(--line);
+        }
+        .related h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .related ul {
+            list-style: none;
+            padding: 0;
+        }
+        .related li {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+        .related a {
+            color: var(--cream);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(242, 221, 188, 0.3);
+        }
+        .related a:hover { color: var(--ink); border-color: var(--tomato); }
+
+        .disclaimer {
+            margin-top: 40px;
+            padding: 16px 20px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgba(29, 21, 19, 0.6);
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            padding: 48px 0 36px;
+            border-top: 1px solid var(--line);
+            background: #0a0706;
+        }
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .footer strong {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: -.02em;
+            color: var(--ink);
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        .footer-links a { color: var(--muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--ink); }
+
+        @media (max-width: 640px) {
+            article { padding: 100px 0 56px; }
+            .cta-card { padding: 24px 20px; }
+            .tldr { padding: 18px 20px; }
+            blockquote { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="shell-wide topbar-inner">
+            <a class="brand" href="/" aria-label="Focus or Ketchup home">
+                <span class="brand-mark"><img src="/assets/icon.png" alt="Focus or Ketchup icon"></span>
+                <span class="brand-name">Focus or Ketchup</span>
+            </a>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="/#how">How it works</a>
+                <a href="/#community">The Family</a>
+                <a class="button" href="https://apps.apple.com/app/id6808171272" target="_blank" rel="noopener">Get the app</a>
+            </nav>
+        </div>
+    </header>
+
+    <article>
+        <div class="shell">
+
+            <span class="article-eyebrow"><span class="eyebrow-dot"></span>ADHD &amp; focus</span>
+
+            <h1>Pomodoro for ADHD: What Actually Works <span>(And What Doesn't)</span></h1>
+
+            <p class="lede">The 25-minute rule gets praised everywhere, and then half the ADHD subreddit says it breaks on them within a week. Both camps are right. Here is what the research says, what Reddit says, and what to change so the timer stops being another thing you quit.</p>
+
+            <div class="article-meta">
+                <span>By <strong>Pawel Zielinski</strong></span>
+                <span>Published Oct 29, 2026</span>
+                <span>Reading time: 12 min</span>
+            </div>
+
+            <section class="tldr">
+                <span class="tldr-label">The short version</span>
+                <h2>Why Pomodoro helps ADHD, briefly</h2>
+                <ul>
+                    <li>It gives a visible finish line to a brain that struggles to sense time passing.</li>
+                    <li>It lowers the activation cost of starting, because 25 minutes is a smaller promise than "finish the project".</li>
+                    <li>It outsources structure to the timer, instead of asking your prefrontal cortex to supply it.</li>
+                    <li>It only works if you let yourself adjust the length. Stock 25/5 fails more ADHDers than it helps.</li>
+                </ul>
+            </section>
+
+            <p>If you have ADHD and you have ever opened Instagram at minute 7 of a 25-minute Pomodoro, this piece is for you. The honest answer to <em>does Pomodoro work for ADHD</em> is: yes, with changes. The stock version from a 1980s productivity book is not the one that will keep you in your seat. The adapted version might.</p>
+
+            <p>I built an app around this exact problem, so I am biased, but I also read the research and the recurring complaints in <a href="https://www.reddit.com/r/ADHD/comments/1ntdjqh" target="_blank" rel="noopener">r/ADHD</a> for months before writing a line of code. The pattern was clear. People love the idea of a timer. They quit the stock implementation within a week or two. Then they blame themselves. The timer is not the problem. The default settings are.</p>
+
+            <h2>Why the ADHD brain and a tomato timer get along</h2>
+
+            <p>Three things make Pomodoro feel like relief when you have ADHD, at least the first time. Understanding them is useful because it tells you which parts to protect when you start adapting the technique.</p>
+
+            <h3>Dopamine and the starting problem</h3>
+
+            <p>ADHD is tied to lower baseline dopamine in the brain's reward and motivation circuits. Nora Volkow and colleagues showed this directly with PET scans in a <a href="https://jamanetwork.com/journals/jama/fullarticle/184799" target="_blank" rel="noopener">2009 JAMA study</a> on dopamine markers in adults with ADHD. The practical translation: tasks that are not already interesting, novel, challenging, or urgent do not produce enough dopamine to make you start them. That is why you can play a video game for four hours without blinking, and then sit paralyzed in front of a half-finished email.</p>
+
+            <p>A 25-minute timer manufactures a small amount of urgency on demand. It turns an open task ("write the thing") into a time-bounded one ("write the thing for 25 minutes"). Smaller promise, smaller activation cost. Your dopamine system actually responds.</p>
+
+            <h3>Time blindness and the finish line</h3>
+
+            <p>If you have ADHD, you probably know this one even if you have never heard the term. <strong>Time blindness</strong> is the clinical shorthand for not being able to sense how much time has passed, how long something will take, or how close a deadline is until it is on top of you. Barkley has written about it for decades. A visible timer, especially a visual one that shrinks as the session ends, puts an external clock in front of you so your brain stops guessing.</p>
+
+            <p>This is the reason physical kitchen timers and apps with circular countdowns feel more helpful than digital clocks. You see "about half left" instead of calculating it.</p>
+
+            <h3>External structure beats internal intention</h3>
+
+            <p>This is a line I keep coming back to. ADHD brains do not respond well to "I will focus now". They respond better to "the timer is running, and when it stops I get a break". The structure lives outside your head, which is exactly where you want it, because the inside is busy thinking about seventeen other things.</p>
+
+            <p>Pomodoro is really a wrapper for that principle. The 25 and the 5 are less important than the <em>externality</em> of the system. Something is in charge, and it is not you deciding minute by minute whether to keep going.</p>
+
+            <h2>Where the 25/5 rule breaks for ADHD</h2>
+
+            <p>So why does it fall apart for so many people? Four reasons show up again and again in Reddit threads, App Store reviews, and in my own testing.</p>
+
+            <h3>1. Hyperfocus eats the warning</h3>
+
+            <p>If you have ADHD, you know that getting into flow is rare and precious. When it finally happens, a bell at minute 25 is not a break reminder. It is a demolition. You lose the thread, you lose the next sentence, and you lose the next hour trying to find both again.</p>
+
+            <p>There is a quiet FOMO built into stock Pomodoro: you got there, and now the technique is pulling you out. One review of a popular Pomodoro app put it plainly:</p>
+
+            <blockquote>
+                "Let me interrupt a session without being punished by a sad tomato. Sometimes life interrupts you."
+                <cite>App Store review, FocusPomo</cite>
+            </blockquote>
+
+            <h3>2. The shame of the broken session</h3>
+
+            <p>Gamified Pomodoros often punish failure. A tree dies, a streak resets, a sad animal appears. For a neurotypical brain this is friction that helps you focus. For an ADHD brain that already carries a lifetime of "you did not finish" shame, it can be the exact wrong motivator. The result: you avoid starting again, because starting means risking another failure.</p>
+
+            <h3>3. 25 minutes is sometimes too long</h3>
+
+            <p>Especially on bad days. On a day with low meds, poor sleep, or the kind of anxious procrastination that keeps you circling the task, 25 minutes is a cliff. Five is doable. Ten is doable. Twenty-five looks like a wall. If the only option your timer offers is 25, you simply do not start.</p>
+
+            <h3>4. 25 minutes is sometimes too short</h3>
+
+            <p>Yes, at the same time. For deep technical work, writing, or anything that needs long context loading, 25 minutes often runs out exactly when you were about to drop in. Developer communities have been quietly running <a href="https://www.nicecoder.com/blog/pomodoro-for-programmers/" target="_blank" rel="noopener">50/10 Pomodoros</a> for years for this reason.</p>
+
+            <p>So the stock version is both too long on hard days and too short on good ones. Which is a strong hint that the number is not the point. The adjustability is.</p>
+
+            <h2>How to adapt Pomodoro for an ADHD brain</h2>
+
+            <p>Here is what actually tends to work, pulled from research on task initiation, ADHD coaching practice, and the recurring workarounds people describe themselves.</p>
+
+            <h3>Start smaller than feels serious</h3>
+
+            <p>If you cannot start a 25-minute session today, do not do a 25-minute session today. Do five. Then do another five if you want to. The goal on a bad day is a win on the board, not an impressive log. ADDA, the Attention Deficit Disorder Association, calls this the <a href="https://add.org/adhd-procrastination/" target="_blank" rel="noopener">micro-start strategy</a>: shrink the first unit until it is embarrassingly small, then start.</p>
+
+            <p>A 10-minute session on a hard day is worth more than zero sessions. Zero is a day you did not practice the habit. Ten is a day you did, just at a lower weight.</p>
+
+            <h3>Use the finish-the-sentence rule</h3>
+
+            <p>This is the single most useful adaptation I have found for the hyperfocus problem. When the timer rings and you are in the middle of something good, you are allowed to finish the smallest complete unit before stopping. One sentence. One paragraph. One function. One row in a spreadsheet.</p>
+
+            <p>Then you write one line about what to do next, on a sticky note or in a scratch file. That single line makes restarting the next session almost automatic, because the warm-up is already done. You are not starting cold.</p>
+
+            <h3>Treat breaks as negotiable</h3>
+
+            <p>Five minutes is a default, not a law. Some tasks need thirty seconds of standing up. Others need ten minutes of walking around the block. Rigid breaks do not match the actual rhythm of knowledge work, and ADHD brains especially resent being told how long to rest.</p>
+
+            <p>Rule of thumb: the break should be long enough that you want to go back. Not so short that you feel cheated, not so long that you drift into something else.</p>
+
+            <h3>Add external accountability on top</h3>
+
+            <p>The timer alone is weaker than the timer plus something else. The "something else" differs by person. Pick one.</p>
+
+            <ul>
+                <li><strong>Body doubling.</strong> Working alongside another person, in the same room or on a shared video call, has <a href="https://flown.com/blog/adhd/task-initiation" target="_blank" rel="noopener">decent evidence for ADHD task initiation</a>. Services like Focusmate and FLOWN exist for this reason.</li>
+                <li><strong>App blocking.</strong> If the phone is where you lose sessions, a timer that locks social and video apps during the session is the highest-ROI change you can make. Willpower is a losing fight against a notification.</li>
+                <li><strong>Visible progress.</strong> Mark the session on paper, in a widget, or in the app's history. ADHD brains run on short-horizon dopamine. Seeing a stack of completed sessions is motivating in a way "it is good for you" is not.</li>
+            </ul>
+
+            <h3>Make the timer visible without making it loud</h3>
+
+            <p>Visual timers help. A countdown bar, a shrinking disk, a widget on the home screen. The classroom "Time Timer" that teachers use with ADHD kids is a visual timer because visibility makes the time real. You do not want it blinking in your face every minute, and you do not want a loud ticking sound hammering your nerves, but a glance that confirms "about seven minutes left" takes anxiety out of the session.</p>
+
+            <div class="cta-card">
+                <h3>If you are shopping for a timer</h3>
+                <p>Focus or Ketchup gives you a free 25-minute timer with voice cues, custom session lengths, and an optional Focus Lock that blocks distracting apps while you work. No subscription for the base timer. Available on iPhone.</p>
+                <a class="cta-button" href="https://apps.apple.com/app/id6808171272" target="_blank" rel="noopener" data-analytics-location="blog_adhd_cta">Get Focus or Ketchup on the App Store</a>
+            </div>
+
+            <h2>Tools that actually fit ADHD brains</h2>
+
+            <p>I will not list ten apps and pretend they are all equal. Here are the three categories that matter, and what to look for in each.</p>
+
+            <h3>Timers with flexibility</h3>
+
+            <p>Avoid apps that lock you into 25/5 unless you pay. The whole point for ADHD is that you adjust the length to your current state. If the app treats custom intervals as a premium feature, it is not built for the brain that most needs them.</p>
+
+            <h3>App blockers you can trust during a session</h3>
+
+            <p>On iOS, this is Apple's Screen Time API territory. The honest version: iOS Screen Time alone is easy to bypass. Dedicated focus apps use the same APIs but add session-based locking, so apps are blocked only while the timer runs, and you cannot dismiss the block without ending the session. That tension is the point. Willpower is replaced with mechanics.</p>
+
+            <h3>Visual time, not just numbers</h3>
+
+            <p>Pick a timer that gives you something to see at a glance. A progress ring, a countdown, a widget. Numerical digital timers require math, and math is friction, and ADHD does not need more friction.</p>
+
+            <h2>When Pomodoro stops working, and what to try next</h2>
+
+            <p>Sometimes the technique stops helping. If that happens, you have options. You do not need to pick one for life.</p>
+
+            <ul>
+                <li><strong>Flowtime.</strong> Work until you naturally run out of focus, then break until you naturally want to come back. Track both. This fits deep creative work better than fixed intervals.</li>
+                <li><strong>50/10 or 90/20.</strong> The 90-minute cycle is based on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022395610000725" target="_blank" rel="noopener">ultradian rhythms</a>, the body's roughly 90-minute cycle of high and low alertness. For some ADHDers it fits better than 25-minute sprints.</li>
+                <li><strong>No timer days.</strong> Some days the structure helps. Some days the structure feels like a cage. Both are allowed.</li>
+            </ul>
+
+            <p>The strongest version of Pomodoro for ADHD is not a schedule you follow forever. It is a tool you reach for when starting feels hard, and set down when flow takes over.</p>
+
+            <h2>Frequently asked questions</h2>
+
+            <div class="faq-item">
+                <h3>Does the Pomodoro Technique work for ADHD?</h3>
+                <p>Yes, for many people with ADHD, but usually not in the stock 25/5 form. The timer gives external structure and a visible finish line, which helps a brain that struggles with internal time sense. The 25-minute default is often too long when motivation is low, and too short when hyperfocus kicks in. Adjust the length to your task and energy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long should an ADHD person work before a break?</h3>
+                <p>There is no single right number. Start low, often 5 to 15 minutes, when you cannot start at all. Stretch to 50 or 60 when you are deep in flow. The honest rule is: pick a length you can actually finish today, not the length that would look good on a productivity blog.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is 25 minutes too short for ADHD?</h3>
+                <p>It can be, especially for deep work like writing or coding. ADHD hyperfocus often needs 15 to 25 minutes just to warm up. If the timer rings right as you finally dropped in, the alarm feels punishing and the next session gets harder to start.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What focus apps are made for ADHD?</h3>
+                <p>Any app that lets you set custom session lengths, shows the timer visibly, blocks distracting apps during the session, and does not punish you for pausing. Fixed 25-minute timers with gamified punishments for breaks tend to backfire for ADHD brains.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do you stop checking your phone during a Pomodoro?</h3>
+                <p>Willpower loses to a notification nine times out of ten. The most reliable way is a hard block: a focus timer that locks social and video apps on your phone during the session, so opening Instagram simply does not happen. Putting the phone in another room is a close second.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can body doubling replace Pomodoro?</h3>
+                <p>For some people, yes. For others, both together works better than either alone. Body doubling gives you social presence and accountability. A timer gives you a boundary. If one is not enough, stack them.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What if I keep breaking the session?</h3>
+                <p>Shorten the session until you stop breaking it, then slowly extend. If you can hold a five-minute session, you have a baseline. Five becomes seven. Seven becomes ten. The habit is the point, not the number on the clock.</p>
+            </div>
+
+            <section class="related">
+                <h2>Keep reading</h2>
+                <ul>
+                    <li><a href="/blog/adhd-task-paralysis/">ADHD Task Paralysis: The 2-Minute Starter That Breaks It</a></li>
+                    <li><a href="/blog/adhd-time-blindness-timer-tricks/">ADHD Time Blindness: 7 Visual Timer Tricks</a></li>
+                    <li><a href="/blog/pomodoro-adhd-hyperfocus/">Hyperfocus and the 25-Minute Timer: The Finish-the-Sentence Rule</a></li>
+                    <li><a href="/blog/body-doubling-vs-pomodoro-adhd/">Body Doubling vs Pomodoro: What ADHD Reddit Does Instead</a></li>
+                    <li><a href="/blog/pomodoro-adhd-students-study-protocol/">Pomodoro for ADHD Students: A 4-Week Study Protocol</a></li>
+                </ul>
+            </section>
+
+            <aside class="disclaimer">
+                <strong>Not medical advice.</strong> This article summarizes research and user reports about focus techniques and ADHD. It is not a substitute for guidance from a psychiatrist, psychologist, or physician. If you suspect you have ADHD or are managing symptoms, work with a qualified clinician.
+            </aside>
+
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="shell-wide footer-inner">
+            <strong>Focus or Ketchup: Focus. Earn respect.</strong>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="https://agilelabs.pl/polityka_prywatnosci" target="_blank" rel="noopener">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var consentKey = 'pomodoom_analytics_consent';
+            var analyticsEnabled = false;
+
+            function loadAnalytics() {
+                if (analyticsEnabled) return;
+                analyticsEnabled = true;
+
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-KTJW15S4X1';
+                document.head.appendChild(script);
+
+                gtag('js', new Date());
+                gtag('config', 'G-KTJW15S4X1', { anonymize_ip: true });
+            }
+
+            if (localStorage.getItem(consentKey) === 'granted') {
+                loadAnalytics();
+            }
+
+            document.querySelectorAll('[data-analytics-location]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (!analyticsEnabled) return;
+                    gtag('event', 'app_store_click', {
+                        cta_location: link.dataset.analyticsLocation,
+                        link_url: link.href || ''
+                    });
+                });
+            });
+        }());
+    </script>
+
+</body>
+</html>
